@@ -2,6 +2,9 @@
 
 import Navbar from "@/components/Navbar";
 import { useQuery } from "react-query";
+import axios from "axios";
+import { format, fromUnixTime, parseISO } from "date-fns";
+import { parse } from "path";
 
 interface WeatherDetail {
   dt: number;
@@ -62,21 +65,37 @@ interface WeatherData {
 export default function Home() {
   const { isLoading, error, data } = useQuery<WeatherData>('repoData', 
   async () => {
-    const {data} = await axios.get("https://api.openweathermap.org/data/2.5/forecast?q=pune&appid=4b5862e8f419a5027d1ad0aa0fca1948&cnt=56");
+    const {data} = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=pune&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}&cnt=56`);
     return data;
-  }
-
-    // fetch('https://api.openweathermap.org/data/2.5/forecast?q=pune&appid=4b5862e8f419a5027d1ad0aa0fca1948&cnt=56').then(res =>
-    //   res.json()
-    // )
+  } 
   )
 
-  if (isLoading) return 'Loading...'
+  if (isLoading) return(
+    <div className="flex items-center min-h-screen justify-center">
+      <p className="animate-bounce">Loading...</p>
+    </div>
+  )
+
+  const firstData  = data?.list[0];
 
   console.log("data", data)
+  
   return (
     <div className="flex flex-col gap-4 bg-gray-100 min-h-screen">
     <Navbar/>
+    <main className="px-3 max-w-7xl mx-auto flex flex-col gap-9 w-full pb-10 pt-4">
+      {/* todya data */}
+      <section>
+        <div>
+          <h2 className="flex gap-1 text-2xl items-end ">
+            <p>{format(parseISO(firstData?.dt_txt ?? ""), "EEEE")}</p>
+            <p className="text-lg">{format(parseISO(firstData?.dt_txt ?? ""), "dd.MM.yy")}</p>
+          </h2>
+        </div>
+      </section>
+      {/* 7 day forcast data */}
+      <section></section>
+    </main>
     </div>
   );
 }
