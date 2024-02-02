@@ -116,26 +116,183 @@ export default function Home() {
 
   if (isLoading)
     return (
-      <div className="flex items-center min-h-screen justify-center">
-        <div className="container">
-  <div className="cloud front">
-    <span className="left-front"></span>
-    <span className="right-front"></span>
-  </div>
-  <span className="sun sunshine"></span>
-  <span className="sun"></span>
-  <div className="cloud back">
-    <span className="left-back"></span>
-    <span className="right-back"></span>
-  </div>
-</div>
+      <div className="flex items-center min-h-screen justify-center bg-[#212121]">
+        <div className="scene">
+          <div className="forest">
+            <div className="tree tree1">
+              <div className="branch branch-top" />
+              <div className="branch branch-middle" />
+            </div>
+            <div className="tree tree2">
+              <div className="branch branch-top" />
+              <div className="branch branch-middle" />
+              <div className="branch branch-bottom" />
+            </div>
+            <div className="tree tree3">
+              <div className="branch branch-top" />
+              <div className="branch branch-middle" />
+              <div className="branch branch-bottom" />
+            </div>
+            <div className="tree tree4">
+              <div className="branch branch-top" />
+              <div className="branch branch-middle" />
+              <div className="branch branch-bottom" />
+            </div>
+            <div className="tree tree5">
+              <div className="branch branch-top" />
+              <div className="branch branch-middle" />
+              <div className="branch branch-bottom" />
+            </div>
+            <div className="tree tree6">
+              <div className="branch branch-top" />
+              <div className="branch branch-middle" />
+              <div className="branch branch-bottom" />
+            </div>
+            <div className="tree tree7">
+              <div className="branch branch-top" />
+              <div className="branch branch-middle" />
+              <div className="branch branch-bottom" />
+            </div>
+          </div>
+          <div className="tent">
+            <div className="roof" />
+            <div className="roof-border-left">
+              <div className="roof-border roof-border1" />
+              <div className="roof-border roof-border2" />
+              <div className="roof-border roof-border3" />
+            </div>
+            <div className="entrance">
+              <div className="door left-door">
+                <div className="left-door-inner" />
+              </div>
+              <div className="door right-door">
+                <div className="right-door-inner" />
+              </div>
+            </div>
+          </div>
+          <div className="floor">
+            <div className="ground ground1" />
+            <div className="ground ground2" />
+          </div>
+          <div className="fireplace">
+            <div className="support" />
+            <div className="support" />
+            <div className="bar" />
+            <div className="hanger" />
+            <div className="smoke" />
+            <div className="pan" />
+            <div className="fire">
+              <div className="line line1">
+                <div className="particle particle1" />
+                <div className="particle particle2" />
+                <div className="particle particle3" />
+                <div className="particle particle4" />
+              </div>
+              <div className="line line2">
+                <div className="particle particle1" />
+                <div className="particle particle2" />
+                <div className="particle particle3" />
+                <div className="particle particle4" />
+              </div>
+              <div className="line line3">
+                <div className="particle particle1" />
+                <div className="particle particle2" />
+                <div className="particle particle3" />
+                <div className="particle particle4" />
+              </div>
+            </div>
+          </div>
+          <div className="time-wrapper">
+            <div className="time">
+              <div className="day" />
+              <div className="night">
+                <div className="moon" />
+                <div className="star star1 star-big" />
+                <div className="star star2 star-big" />
+                <div className="star star3 star-big" />
+                <div className="star star4" />
+                <div className="star star5" />
+                <div className="star star6" />
+                <div className="star star7" />
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     );
   if (error)
     return (
       <div className="flex items-center min-h-screen justify-center">
-        {/* @ts-ignore */}
-        <p className="text-red-400">{error.message}</p>
+        <div className="main_wrapper">
+          <div className="main">
+            <div className="antenna">
+              <div className="antenna_shadow" />
+              <div className="a1" />
+              <div className="a1d" />
+              <div className="a2" />
+              <div className="a2d" />
+              <div className="a_base" />
+            </div>
+            <div className="tv">
+              <div className="cruve">
+                <svg
+                  xmlSpace="preserve"
+                  viewBox="0 0 189.929 189.929"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.1"
+                  className="curve_svg"
+                >
+                  <path
+                    d="M70.343,70.343c-30.554,30.553-44.806,72.7-39.102,115.635l-29.738,3.951C-5.442,137.659,11.917,86.34,49.129,49.13
+  C86.34,11.918,137.664-5.445,189.928,1.502l-3.95,29.738C143.041,25.54,100.895,39.789,70.343,70.343z"
+                  />
+                </svg>
+              </div>
+              <div className="display_div">
+                <div className="screen_out">
+                  <div className="screen_out1">
+                    <div className="screen">
+                      <span className="notfound_text"> NOT FOUND</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="lines">
+                <div className="line1" />
+                <div className="line2" />
+                <div className="line3" />
+              </div>
+              <div className="buttons_div">
+                <div className="b1">
+                  <div />
+                </div>
+                <div className="b2" />
+                <div className="speakers">
+                  <div className="g1">
+                    <div className="g11" />
+                    <div className="g12" />
+                    <div className="g13" />
+                  </div>
+                  <div className="g" />
+                  <div className="g" />
+                </div>
+              </div>
+            </div>
+            <div className="bottom">
+              <div className="base1" />
+              <div className="base2" />
+              <div className="base3" />
+            </div>
+          </div>
+          <div className="text_404">
+            <div className="text_4041">4</div>
+            <div className="text_4042">0</div>
+            <div className="text_4043">4</div>
+          </div>
+        </div>
+
       </div>
     );
   return (
