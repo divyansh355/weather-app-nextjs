@@ -21,6 +21,9 @@ export default function RootLayout({
   const queryClient = new QueryClient();
   return (
     <html lang="en">
+      <head>
+      <link rel="manifest" href="/site.webmanifest"/>
+      </head>
       <QueryClientProvider client={queryClient}>
         <body className={inter.className}>{children}</body>
       </QueryClientProvider>
