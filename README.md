@@ -2,7 +2,7 @@
 
 <h2>🚀 Demo</h2>
 
-[Weather App](weather-app-nextjs-nine.vercel.app/)
+[Weather App](https://weather-app-nextjs-nine.vercel.app/)
 
 <h2>Project Screenshots:</h2>
 
