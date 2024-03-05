@@ -2,7 +2,7 @@
 
 <h2>🚀 Demo</h2>
 
-[https://weather-app-next-js.netlify.app](https://weather-app-next-js.netlify.app)
+[Weather App](weather-app-nextjs-nine.vercel.app/)
 
 <h2>Project Screenshots:</h2>
 
